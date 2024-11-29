@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+
+<body class="dark: min-h-screen dark:bg-gray-800 dark:text-white">
+`    </div>
+    <div class="flex flex-col max-w-96 w-full mx-auto">
+        <form id="todoForm" class="py-10 flex flex-col">
+            <label class="form-control w-full">
+                <div class="label">
+                    <span class="label-text">Nma ish Bajarasiz?</span>
+                </div>
+                <input name="todoName" type="text" placeholder="Topshiriq Nomini yozing" class="input input-bordered w-full dark:bg-gray-900" />
+                <div class="label"></div>
+            </label>
+            <label class="form-control">
+                <div class="label">
+                    <span class="label-text">Topshiriq Haqida</span>
+                </div>
+                <textarea name="todoBody" class="textarea textarea-bordered h-24 dark:bg-gray-900" placeholder="Topshiriq Haqida qisqacha yozing"></textarea>
+                <div class="label">
+                </div>
+            </label>
+            <button name="todoSubmit" class="btn btn-active btn-neutral w-full">Jonatish</button>
+        </form>
+    </div>
+    <div id="todosParent"></div>
+    <template id="todoTemplate">
+        <div class="h-[250px]">
+            <li data-id="1" class="mx-auto  card bg-gray-600 text-white w-96">
+                <div class="card-body ">
+                    <h2 id="todoTitle" class="card-title">Card title!</h2>
+                    <p id="todoBody">If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="form-control">
+                        <label class="label cursor-pointer">
+                            <span>Remember me</span>
+                            <button data-id="1" id="todoTahrir" class="ml-32"><img src="img/edit-round-icon.png" class="pointer-events-none" alt="" width="24" height="24"></button>
+
+                            <input id="todoCheckbox" type="checkbox" class="checkbox" />
+                        </label>
+                    </div>
+                    <button id="todoDelete" class="btn btn-error">Delete</button>
+                </div>
+            </li>
+        </div>
+    </template>
+    <script src="./js/script.js" type="module"></script>
+</body>
+
+</html>
